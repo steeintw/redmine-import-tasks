@@ -1,37 +1,72 @@
 <h2>Configure column positions of your excel sheets </h2>
-<p> 
+<p>
 
-<% column_array=[['1', 0], ['2', 1],['3', 2],['4', 3],['5', 4],['6', 5],['7', 6],['8', 7],['9', 8],['10', 9]] %>
-<label><%= l(:label_column_position_for_task_title) %> </label>
-<%= select_tag  'settings[task_column]', options_for_select(column_array,settings['task_column'] ) ,:style => "width:45px" ,:class =>"select_box" ,:onchange => "changeColumnPosition(this);"%>
-</p>
-
-<p> 
-<label><%= l(:label_column_position_for_task_description) %> </label>
-<%= select_tag  'settings[task_description_column]', options_for_select(column_array,settings['task_description_column'] ) ,:style => "width:45px" ,:class =>"select_box" ,:onchange => "changeColumnPosition(this);"%>
+<% column_array=[['1', 0], ['2', 1],['3', 2],['4', 3],['5', 4],['6', 5],['7', 6],['8', 7],['9', 8],['10', 9],['11', 10],['12', 11],['13', 12]] %>
+<label><%= l(:label_column_position_for_task_id) %> </label>
+<%= select_tag  'settings[task_id_column]', options_for_select(column_array,settings['task_id_column'] ) ,:style => "width:45px" ,:class =>"select_box" ,:onchange => "changeColumnPosition(this);"%>
 </p>
 
 <p>
-<label><%= l(:label_column_position_for_average_hour_case) %></label>
-<%= select_tag 'settings[average_hour_column]' , options_for_select(column_array,settings['average_hour_column'] ) ,:style => "width:45px" ,:class =>"select_box" ,:onchange =>"changeColumnPosition(this);"%>
+<label><%= l(:label_column_position_for_task_tracker) %> </label>
+<%= select_tag  'settings[task_tracker_column]', options_for_select(column_array,settings['task_tracker_column'] ) ,:style => "width:45px" ,:class =>"select_box" ,:onchange => "changeColumnPosition(this);"%>
 </p>
 
 <p>
-<label><%= l(:label_column_position_for_start_date) %></label>
-<%= select_tag 'settings[start_date_column]',options_for_select(column_array,settings['start_date_column'] ) ,:style => "width:45px",
+<label><%= l(:label_column_position_for_task_subject) %></label>
+<%= select_tag 'settings[task_subject_column]' , options_for_select(column_array,settings['task_subject_column'] ) ,:style => "width:45px" ,:class =>"select_box" ,:onchange =>"changeColumnPosition(this);"%>
+</p>
+
+<p>
+<label><%= l(:label_column_position_for_assignee_name) %></label>
+<%= select_tag 'settings[assignee_name_column]',options_for_select(column_array,settings['assignee_name_column'] ) ,:style => "width:45px",
      :class =>"select_box" ,:onchange =>"changeColumnPosition(this);"%>
 </p>
 
 <p>
-<label><%= l(:label_column_position_for_end_date) %></label>
-<%= select_tag 'settings[end_date_column]', options_for_select(column_array,settings['end_date_column'] ) ,:style => "width:45px" ,
+<label><%= l(:label_column_position_for_approver) %></label>
+<%= select_tag 'settings[approver_column]', options_for_select(column_array,settings['approver_column'] ) ,:style => "width:45px" ,
 		:class =>"select_box" ,:onchange => "changeColumnPosition(this);"
  %>
 </p>
 
 <p>
-<label><%= l(:label_column_position_for_asignee_name) %></label>
-<%= select_tag 'settings[asignee_name_column]', options_for_select(column_array,settings['asignee_name_column'] ) ,:style => "width:45px" ,:class =>"select_box" , :onchange => "changeColumnPosition(this);"%>
+<label><%= l(:label_column_position_for_notice) %></label>
+<%= select_tag 'settings[notices_column]', options_for_select(column_array,settings['notices_column'] ) ,:style => "width:45px" ,:class =>"select_box" , :onchange => "changeColumnPosition(this);"%>
+</p>
+
+<p>
+<label><%= l(:label_column_position_for_start_date) %></label>
+<%= select_tag 'settings[start_date_column]', options_for_select(column_array,settings['start_date_column'] ) ,:style => "width:45px" ,:class =>"select_box" , :onchange => "changeColumnPosition(this);"%>
+</p>
+
+<p>
+<label><%= l(:label_column_position_for_due_date) %></label>
+<%= select_tag 'settings[due_date_column]', options_for_select(column_array,settings['due_date_column'] ) ,:style => "width:45px" ,:class =>"select_box" , :onchange => "changeColumnPosition(this);"%>
+</p>
+
+<p>
+<label><%= l(:label_column_position_for_task_status) %></label>
+<%= select_tag 'settings[task_status_column]', options_for_select(column_array,settings['task_status_column'] ) ,:style => "width:45px" ,:class =>"select_box" , :onchange => "changeColumnPosition(this);"%>
+</p>
+
+<p>
+<label><%= l(:label_column_position_for_task_priority) %></label>
+<%= select_tag 'settings[task_priority_column]', options_for_select(column_array,settings['task_priority_column'] ) ,:style => "width:45px" ,:class =>"select_box" , :onchange => "changeColumnPosition(this);"%>
+</p>
+
+<p>
+<label><%= l(:label_column_position_for_task_description) %></label>
+<%= select_tag 'settings[task_description_column]', options_for_select(column_array,settings['task_description_column'] ) ,:style => "width:45px" ,:class =>"select_box" , :onchange => "changeColumnPosition(this);"%>
+</p>
+
+<p>
+<label><%= l(:label_column_position_for_parent_task_id) %></label>
+<%= select_tag 'settings[parent_task_id_column]', options_for_select(column_array,settings['parent_task_id_column'] ) ,:style => "width:45px" ,:class =>"select_box" , :onchange => "changeColumnPosition(this);"%>
+</p>
+
+<p>
+<label><%= l(:label_column_position_for_related_tasks) %></label>
+<%= select_tag 'settings[related_tasks_column]', options_for_select(column_array,settings['related_tasks_column'] ) ,:style => "width:45px" ,:class =>"select_box" , :onchange => "changeColumnPosition(this);"%>
 </p>
 
 <p>
@@ -64,8 +99,8 @@
 </div> -->
 
 <table id="excel-view-table" style="border:2px solid;">
-	<tr id="table-header" style="border:2px solid;">   
-		
+	<tr id="table-header" style="border:2px solid;">
+
 	</tr>
 	<tr>
 		<td></td>
@@ -78,15 +113,17 @@
 		<td></td>
 		<td></td>
 		<td></td>
-
+		<td></td>
+    <td></td>
+    <td></td>
 	</tr>
 
 </table>
 <% content_for :header_tags do %>
-  
+
   <%= javascript_include_tag :issue_importer, :plugin => 'issue_importer_xls' %>
- 
- 
+
+
 <% end %>
 
  <script type="text/javascript">
@@ -94,26 +131,41 @@
 // 		alert( "Handler for change called " );
 // 	});
 $(document).ready(function(){
-			
-				
-			var taskColumn=$("#settings_task_column").val();
-			var taskDescription=$("#settings_task_description_column").val();
-			var averageHourColumn=$("#settings_average_hour_column").val();
-			var startDateColumn=$("#settings_start_date_column").val();
-			var dueDateColumn=$("#settings_end_date_column").val();
-			var asigneeColumn=$("#settings_asignee_name_column").val();
+
+
+			var task_id_column=$("#settings_task_id_column").val();
+      var task_tracker_column=$("#settings_task_tracker_column").val();
+      var task_subject_column=$("#settings_task_subject_column").val();
+			var assignee_name_column=$("#settings_assignee_name_column").val();
+      var approver_column=$("#settings_approver_column").val();
+      var notices_column=$("#settings_notices_column").val();
+			var start_date_column=$("#settings_start_date_column").val();
+			var due_date_column=$("#settings_due_date_column").val();
+			var task_status_column=$("#settings_task_status_column").val();
+      var task_priority_column=$("#settings_task_priority_column").val();
+      var task_description_column=$("#settings_task_description_column").val();
+      var parent_task_id_column=$("#settings_parent_task_id_column").val();
+      var related_tasks_column=$("#settings_related_tasks_column").val();
+
 			var appendString="";
 
 			var tableHeader=$("#table-header");
 
-			for(var i=0;i<10;i++){
+			for(var i=0;i<13;i++){
 
-					if(i==taskColumn) appendString+="<th id="+i+" class='taskTitle'>Task</th>";
-					else if(i==taskDescription) appendString+="<th id="+i+" class='taskDescription'>Task Description</th>";
-					else if(i==averageHourColumn) appendString+="<th id="+i+" class='averageHour'>Average Hour Case</th>" ;
-					else if(i==startDateColumn) appendString+="<th id="+i+" class='startDate'>Start Date(YYYY-MM-dd)</th>";
-					else if(i==dueDateColumn) appendString+="<th id="+i+" class='endDate'>Due Date(YYYY-MM-dd)</th>" ;
-					else if(i==asigneeColumn) appendString+="<th id="+i+" class='asignee'>Asignee</th>" ;
+					if(i==task_id_column) appendString+="<th id="+i+" class='taskId'>Id</th>";
+          else if(i==task_tracker_column) appendString+="<th id="+i+" class='taskTracker'>Tracker</th>";
+					else if(i==task_subject_column) appendString+="<th id="+i+" class='taskSubject'>Subject</th>";
+					else if(i==assignee_name_column) appendString+="<th id="+i+" class='assigneeName'>Assignee</th>" ;
+					else if(i==approver_column) appendString+="<th id="+i+" class='approver'>Approver</th>";
+					else if(i==notices_column) appendString+="<th id="+i+" class='notice'>Notice</th>" ;
+					else if(i==start_date_column) appendString+="<th id="+i+" class='startDate'>Start Date(yyyy-MM-dd)</th>" ;
+          else if(i==due_date_column) appendString+="<th id="+i+" class='dueDate'>Due Date(yyyy-MM-dd)</th>" ;
+          else if(i==task_status_column) appendString+="<th id="+i+" class='taskStatus'>Status</th>" ;
+          else if(i==task_priority_column) appendString+="<th id="+i+" class='taskPriority'>Priority</th>" ;
+          else if(i==task_description_column) appendString+="<th id="+i+" class='taskDescription'>Description</th>" ;
+          else if(i==parent_task_id_column) appendString+="<th id="+i+" class='parentTaskId'>Parent Task Id</th>" ;
+          else if(i==related_tasks_column) appendString+="<th id="+i+" class='relatedTasks'>Related Tasks</th>" ;
 					else appendString+="<th id="+i+"></th>"
 
 
@@ -125,27 +177,50 @@ $(document).ready(function(){
 
 function changeColumnPosition(element){
 
-	if(element.id == "settings_task_column"){
-		columnPos=$("#settings_task_column").val();
-		$(".taskTitle").empty();
-		$("th").removeClass("taskTitle");
+  if(element.id == "settings_task_id_column"){
+		$(".taskId").empty();
+		$("th").removeClass("taskId");
+		columnPos=$("#settings_task_id_column").val();
 		$("#"+columnPos).empty();
-		$("#"+columnPos).html("Task");
-		$("#"+columnPos).addClass("taskTitle");
-	}else if(element.id == "settings_task_description_column"){
-		columnPos=$("#settings_task_description_column").val();
-		$(".taskDescription").empty();
+		$("#"+columnPos).html("Id");
+		$("#"+columnPos).addClass("taskId");
+	}else if(element.id == "settings_task_tracker_column"){
+		columnPos=$("#task_tracker_column").val();
+		$(".taskTracker").empty();
+		$("th").removeClass("taskTracker");
 		$("#"+columnPos).empty();
-		$("th").removeClass("taskDescription");
-		$("#"+columnPos).html("Task Description");
-		$("#"+columnPos).addClass("taskDescription");
-	}else if(element.id == "settings_average_hour_column"){
-		$(".averageHour").empty();
-		$("th").removeClass("averageHour");
-		columnPos=$("#settings_average_hour_column").val();
+		$("#"+columnPos).html("Tracker");
+		$("#"+columnPos).addClass("taskTracker");
+	}else if(element.id == "settings_task_subject_column"){
+		columnPos=$("#task_subject_column").val();
+		$(".taskSubject").empty();
+		$("th").removeClass("taskSubject");
 		$("#"+columnPos).empty();
-		$("#"+columnPos).html("Average Hour Case");
-		$("#"+columnPos).addClass("averageHour");
+		$("#"+columnPos).html("Subject");
+		$("#"+columnPos).addClass("taskSubject");
+	}else if(element.id == "settings_assignee_name_column"){
+		$(".assigneeName").empty();
+		$("th").removeClass("assigneeName");
+		columnPos=$("#settings_assignee_name_column").val();
+		$("#"+columnPos).empty();
+		$("#"+columnPos).html("Assignee");
+		$("#"+columnPos).addClass("assigneeName");
+
+	}else if(element.id == "settings_approver_column"){
+		$(".approver").empty();
+		$("th").removeClass("approver");
+		columnPos=$("#settings_approver_column").val();
+		$("#"+columnPos).empty();
+		$("#"+columnPos).html("Approver");
+		$("#"+columnPos).addClass("approver");
+
+	}else if(element.id == "settings_notices_column"){
+		$(".notice").empty();
+		$("th").removeClass("notice");
+		columnPos=$("#settings_notices_column").val();
+		$("#"+columnPos).empty();
+		$("#"+columnPos).html("Notice");
+		$("#"+columnPos).addClass("notice");
 
 	}else if(element.id== "settings_start_date_column"){
 		$(".startDate").empty();
@@ -155,23 +230,48 @@ function changeColumnPosition(element){
 		$("#"+columnPos).html("Start Date(YYYY-MM-dd)");
 		$("#"+columnPos).addClass("startDate");
 
-	}else if(element.id=="settings_end_date_column"){
-
-		$(".endDate").empty();
-		$("th").removeClass("endDate");
-		columnPos=$("#settings_end_date_column").val();
+	}else if(element.id=="settings_due_date_column"){
+		$(".dueDate").empty();
+		$("th").removeClass("dueDate");
+		columnPos=$("#settings_due_date_column").val();
 		$("#"+columnPos).empty();
-		$("#"+columnPos).html("End Date(YYYY-MM-dd)");
-		$("#"+columnPos).addClass("endDate");
-
-	}else if(element.id == "settings_asignee_name_column"){
-		$(".asignee").empty();
-		$("th").removeClass("asignee");
-		columnPos=$("#settings_asignee_name_column").val();
+		$("#"+columnPos).html("Due Date(YYYY-MM-dd)");
+		$("#"+columnPos).addClass("dueDate");
+	}else if(element.id=="settings_task_status_column"){
+		$(".taskStatus").empty();
+		$("th").removeClass("taskStatus");
+		columnPos=$("#settings_task_status_column").val();
 		$("#"+columnPos).empty();
-		$("#"+columnPos).html("Asignee");
-		$("#"+columnPos).addClass("asignee");
-
+		$("#"+columnPos).html("Status");
+		$("#"+columnPos).addClass("taskStatus");
+	}else if(element.id=="settings_task_priority_column"){
+		$(".taskPriority").empty();
+		$("th").removeClass("taskPriority");
+		columnPos=$("#settings_task_priority_column").val();
+		$("#"+columnPos).empty();
+		$("#"+columnPos).html("Priority");
+		$("#"+columnPos).addClass("taskPriority");
+	}else if(element.id == "settings_task_description_column"){
+		columnPos=$("#settings_task_description_column").val();
+		$(".taskDescription").empty();
+		$("#"+columnPos).empty();
+		$("th").removeClass("taskDescription");
+		$("#"+columnPos).html("Description");
+		$("#"+columnPos).addClass("taskDescription");
+	}else if(element.id == "settings_parent_task_id_column"){
+		columnPos=$("#settings_parent_task_id_column").val();
+		$(".parentTaskId").empty();
+		$("#"+columnPos).empty();
+		$("th").removeClass("parentTaskId");
+		$("#"+columnPos).html("Parent Task Id");
+		$("#"+columnPos).addClass("parentTaskId");
+	}else if(element.id == "settings_related_tasks_column"){
+		columnPos=$("#settings_related_tasks_column").val();
+		$(".relatedTasks").empty();
+		$("#"+columnPos).empty();
+		$("th").removeClass("relatedTasks");
+		$("#"+columnPos).html("Related Tasks");
+		$("#"+columnPos).addClass("relatedTasks");
 	}else {
 		alert("No id match");
 	}
@@ -189,20 +289,30 @@ function geneateExcelSheet(){
 	  $.ajax({
 	    type: "POST",
 	    url: '/generate_excel_sheet',
-	    data:"task_column="+$("#settings_task_column").val()+"&task_description_column="+$("#settings_task_description_column").val()
-	    	+"&average_hour_column="+$("#settings_average_hour_column").val()+"&start_date_column="
-	    	+$("#settings_start_date_column").val()+"&end_date_column="+$("#settings_end_date_column").val()
-	    	+"&asignee_name_column="+$("#settings_asignee_name_column").val()
-	    
+	    data:"task_id_column="+$("#settings_task_id_column").val()
+        +"&task_tracker_column="+$("#settings_task_tracker_column").val()
+	    	+"&task_subject_column="+$("#settings_task_subject_column").val()
+        +"&assignee_name_column="	+$("#settings_assignee_name_column").val()
+        +"&approver_column="+$("#settings_approver_column").val()
+        +"&notices_column="+$("#settings_notices_column").val()
+	    	+"&start_date_column="+$("#settings_start_date_column").val()
+        +"&due_date_column="+$("#settings_due_date_column").val()
+        +"&task_status_column="+$("#settings_task_status_column").val()
+        +"&task_priority_column="+$("#settings_task_priority_column").val()
+        +"&task_description_column="+$("#settings_task_description_column").val()
+        +"&parent_task_id_column="+$("#settings_parent_task_id_column").val()
+        +"&related_tasks_column="+$("#settings_related_tasks_column").val()
+
+
 	     //	console.log(data);
-	    // 	window.open(data,'_blank'); 
+	    // 	window.open(data,'_blank');
 
 
   	 	}).done(function(msg) {
-			//window.open(msg,'_blank'); 
-			
+			//window.open(msg,'_blank');
+
 			window.open(msg,"_blank");
-			// $("#excel-sheet").attr('src',"http://localhost:3000/"+msg);   
+			// $("#excel-sheet").attr('src',"http://localhost:3000/"+msg);
 	 });
 
 
