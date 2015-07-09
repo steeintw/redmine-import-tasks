@@ -3,17 +3,30 @@ en:
   # my_label: "My label"
   label_import_issue_note: Import issues from Excel file
   label_import_issue_upload_file_note: Upload Excel Sheet with following format to create issues.
-  label_import_issue_upload_file_format_note: Task Description |	Best Case	| Worst Case  |	Average Case  |	Notes  |	Questions | 	Start Date	|  Due Date	| Total(in weeks) |	Asignee
+  label_import_issue_upload_file_format_note: ID | Tracker | Subject | Assignee | Approver | Notice | Start date | Due date | Status | Priority | Description | Parent task | Related tasks
+  label_import_issue_note_1: This function will always create new tasks according to records in Excel file. It will NOT update current tasks in Redmine database.
+  label_import_issue_note_2: ID is a temporary serial number as identity for each record in Excel file. ID is required and MUST be unique. It is NOT a Redmine Task ID.
+  label_import_issue_note_3: You can fill "Parent ID" with another task's ID(in Excel, not Redmine), this function will build this task as a subtask.
+  label_import_issue_note_4: "&quot;Related tasks&quot; format: P|B:{id1, id2, id3...}; ,where P refers to &quot;precedes&quot;, B refers to &quot;blocks&quot;, we only support these 2 relation types."
+  label_import_issue_note_4_1: "For example: Task#1 has related tasks set to &quot;P:3,4; B:5&quot;, means Task#1 precedes Task#3 and Task#4, and blocks Task#5."
+  label_import_issue_note_4_2: ※ Do not use Related tasks if you don't know how to! You can import tasks first and use Gantt to design task dependencies.
   label_import_issue_task: Task
   label_import_issue_design: Design
   label_import_issue_documentation: Documentation
   label_import_issue_testing: Testing
   label_import_issue_development: Development
-  label_column_position_for_task_title: Column Position for Task title
-  label_column_position_for_average_hour_case: Column Position for Average Hour Case
+  label_column_position_for_task_id: Column Position for Task Id
+  label_column_position_for_task_tracker : Column Position for Tracker Name
+  label_column_position_for_task_subject: Column Position for Task subject
+  label_column_position_for_assignee_name: Column Position for Assignee Name
+  label_column_position_for_approver: Column Position for Approver
+  label_column_position_for_notice: Column Position for Notice
   label_column_position_for_start_date: Column Position for Start Date
-  label_column_position_for_end_date: Column Position for Due Date
-  label_column_position_for_asignee_name: Column Position for Asignee Name
+  label_column_position_for_due_date: Column Position for Due Date
+  label_column_position_for_task_status: Column Position for Task Status
+  label_column_position_for_task_priority: Column Position for Priority
   label_column_position_for_task_description : Column Position for Task Description
-  label_save_task_as: Save Task as 
-  label_task_category_note: Task will be created as Feature default.To change plugin configuration go to Administration >> plugins 
+  label_column_position_for_parent_task_id: Column Position for Parent Task Id
+  label_column_position_for_related_tasks: Column Position for Related Tasks
+  label_save_task_as: Save Task as
+  label_task_category_note: Task will be created as Feature default.To change plugin configuration go to Administration >> plugins

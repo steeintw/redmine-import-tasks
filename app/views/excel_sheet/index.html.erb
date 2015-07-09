@@ -4,6 +4,16 @@
 <p><%= l(:label_import_issue_upload_file_note) %></p>
 <p> <%= l(:label_import_issue_upload_file_format_note) %>  </p>
 <p> <%= l(:label_task_category_note) %>  </p>
+<ol>
+  <li><%= l(:label_import_issue_note_1) %></li>
+  <li><%= l(:label_import_issue_note_2) %></li>
+  <li><%= l(:label_import_issue_note_3) %></li>
+  <li>
+    <%= l(:label_import_issue_note_4).html_safe %>
+    <p><%= l(:label_import_issue_note_4_1).html_safe %></p>
+    <p><%= l(:label_import_issue_note_4_2).html_safe %></p>
+  </li>
+</ol>
 
 <p>
 <%= form_tag({:action => 'upload_sheet' }, :multipart => true) do %>

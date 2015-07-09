@@ -1,0 +1,12 @@
+{
+  "transport": "scp",
+  "hostname": "192.168.56.102",
+  "port": "22",
+  "username": "stee",
+  "password": "stee8035",
+  "target": "/home/stee/redmine-3.0.3/plugins/issue_importer_xls",
+  "ignore": [
+    ".git/**"
+  ],
+  "uploadOnSave": true
+}
